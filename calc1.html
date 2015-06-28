@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>simple calculator in javascript!!</title>
+    
+       <script>
+        
+           var a,b,result; 
+       
+           function setvalue()
+        { 
+           a=Number(document.getElementById("first box").value);
+           b=Number(document.getElementById("second box").value)
+        }
+        
+            function add()
+        {
+        setvalue();
+        result=a+b;
+        alert(result)
+        }
+        
+            function sub()
+        {
+        setvalue();
+        result=a-b;
+        alert(result)
+        }
+            function mult()
+        {
+        setvalue();
+        result=a*b;
+        alert(result)
+        }
+            function div()
+        {
+       setvalue();
+        result=a/b;
+        alert(result)
+        }
+            
+        </script>
+    
+</head>
+
+    <body>
+
+        <input type="text" id="first box" />
+<p></p>
+        <input type="text" id="second box" />
+<p></p>
+        <input type="button" value="sum" onclick="add()"/>
+        <input type="button" value="minus" onclick="sub()"/>
+        <input type="button" value="multiply" onclick="mult()"/>
+        <input type="button" value="division" onclick="div()"/>
+        
+    </body>
+</html>
