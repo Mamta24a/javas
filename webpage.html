@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>my webpage</title>
+
+<script>
+ alert("Body from HEAD: "+document.body) // null (document.documentElement)
+ </script>
+
+
+</head>
+<body>
+<h1>heading</h1>
+<p>paragraph</p>
+
+<div about="Elephant" class="smiling">first division</div>
+<div>Last div</div>
+
+
+<ul>
+    <li>Bob</li>
+    <li>Alice</li>
+</ul>
+
+<!-- a comment node -->
+
+ 
+<script>
+//start interacting with a page before the Javascript has Loaded
+
+document.body.style.backgroundColor = 'red';
+alert("Body from inside body: " + document.body); //document.body
+var childNodes = document.body.childNodes  //Child element
+alert(childNodes[0]);
+alert(childNodes[1]);
+
+var children = document.body.children;  //children
+alert(children[0]);
+alert(children[1]);
+
+var body = document.body   //firstChild and the lastChild
+alert(body.firstChild === body.childNodes[0]);
+alert(body.lastChild === body.childNodes[body.childNodes.length-1])
+
+var div = document.body.children[0]   // elem.getAttribute(name)&elem.setAttribute(name, value) 
+    alert( div.getAttribute('ABOUT') ); //o/p:elephant
+    div.setAttribute('Test', 123) ;  
+    alert( document.body.innerHTML );// complete code
+
+document.write('*Hello, there!*');
+
+//document.createElement(tag)
+//parentElem.insertBefore(elem, nextSibling)
+ var div = document.body.children[0];
+var span = document.createElement('span');
+span.innerHTML = 'A new span!';
+div.insertBefore(span, div.firstChild);
+
+
+
+
+</script>
+
+
+</body>
+</html>
