@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>my webpage</title></head>
+<body>
+<div>Very</div>
+<div>Secret</div>
+<div>Child</div>
+
+
+<script>
+var div = document.body.children[0]
+var span = document.createElement('span') 
+span.innerHTML = 'A new span!'
+div.appendChild(span)    //parent.appendChild(elem)
+
+
+//document.createTextNode(value)
+var h = 'hii'                
+var t = document.body.children[0]     
+t.appendChild(document.createTextNode(h))
+
+//parent.removeChild(elem)
+var a=document.body.children[0]
+a.parentNode.removeChild(a)
+
+
+//elem.cloneNode(true)
+//elem.cloneNode(false)
+
+var clone = node.cloneNode(true);
+node.parentNode.appendChild(clone);
+
+
+
+  
+</script>
+
+
+</body>
+</html>
+
+
+
+
